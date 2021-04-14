@@ -5,21 +5,14 @@ using UnityEngine;
 public class testScript : MonoBehaviour
 {
     //intellisense
-    public Light myLight;
-    private Light myOtherLight;
-    private GameObject playerObject;
     private GameObject testObject;
 
-    int numberTest = 5;
+
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Started");
-        Debug.Log("This is my first number output: " + numberTest);
-
-
-
-
+        testObject = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -28,9 +21,18 @@ public class testScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Mosue click");
+            //y value +=5;
+            //testObject.transform.Rotate(0, 100 * Time.deltaTime, 0);
 
+            // testObject.transform.position.Set(x, y, z);
+            testObject.transform.position += Vector3.up * 10.0f;
 
         }
+
+
+
+
 
 
     }
