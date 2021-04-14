@@ -8,8 +8,7 @@ public class testScript : MonoBehaviour
     public Light myLight;
     private Light myOtherLight;
     private GameObject playerObject;
-
-    Transform transform;
+    private GameObject testObject;
 
     int numberTest = 5;
     // Start is called before the first frame update
@@ -17,7 +16,7 @@ public class testScript : MonoBehaviour
     {
         Debug.Log("Started");
         Debug.Log("This is my first number output: " + numberTest);
-        transform = GetComponent<Transform>();
+
 
 
 
@@ -26,7 +25,13 @@ public class testScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform = GetComponent<Transform>();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+
+
+        }
+
 
     }
 }
